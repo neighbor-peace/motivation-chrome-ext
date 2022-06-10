@@ -20,7 +20,9 @@
                 "https://www.youtube.com/*",
                 "https://www.reddit.com/*",
                 "https://*.tumblr.com/*"],
-            "js": ["./main.js"]
+            "js": [
+                "./jquery.js",
+                "./main.js"]
         }
     ]
 }
