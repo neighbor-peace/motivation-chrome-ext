@@ -2,14 +2,20 @@
     "manifest_version": 2,
     "name": "Motivation",
     "version": "1.0",
+    "author": "Extension by Michael Costello. Diary icon by Freepik (https://www.flaticon.com/free-icons/diary).",
     "description": "A chrome extension that motivates you to get back to work when you load a distracting website.",
     "content_scripts": [
         {
             "matches": [
                 "https://www.youtube.com/*",
                 "https://www.reddit.com/*",
-                "https://www.tumblr.com/*"],
+                "https://*.tumblr.com/*"],
             "js": ["./main.js"]
         }
-    ]
+    ],
+    "icons": {
+        "16": "./src/diary (1).png",
+        "48": "./src/diary (1).png",
+        "128": "./src/diary (1).png"
+    }
 }
