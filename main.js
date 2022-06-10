@@ -6,5 +6,4 @@ let contentArray = [
 
 const [contents] = contentArray.filter(el => el !== null);
 
-contents
 contents.parentNode.removeChild(contents);
