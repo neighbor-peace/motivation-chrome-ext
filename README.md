@@ -2,7 +2,7 @@
 
 ## Goals of the Project
 
-- Design a chrome extension to motivate one to return to work upon loading a distracting website.
+- Design a chrome extension that motivates you to get back to work when you load a distracting website.
 - Deepen my understanding of:
   - DOM Manipulation
   - Chrome Developer Tools
