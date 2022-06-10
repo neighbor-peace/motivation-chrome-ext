@@ -8,11 +8,12 @@
     },
     "description": "A chrome extension that motivates you to get back to work when you load a distracting website.",
     "icons": {
-        "16": "./src/diary (1).png",
-        "48": "./src/diary (1).png",
-        "128": "./src/diary (1).png"
+        "16": "./src/writing (16).png",
+        "32": "./src/writing (32).png",
+        "48": "./src/writing (128).png",
+        "128": "./src/writing (128).png"
     },
-    "author": "Extension by Michael Costello. Diary icon by Freepik (https://www.flaticon.com/free-icons/diary).",
+    "author": "Extension by Michael Costello. Writing icon by Freepik (https://www.flaticon.com/free-icons/writing).",
     "content_scripts": [
         {
             "matches": [
