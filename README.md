@@ -1,4 +1,4 @@
-# motivation-chrome-ext
+# Motivation
 
 ## Goals of the Project
 
