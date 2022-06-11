@@ -1,24 +1,33 @@
-$(function() {
+let image = $.ajax({
+        method: 'GET',
+        url: 'https://unsplash.it/list',
+        success: function(result) {
+         // result is whatever the URL sends back from the request
+            let randomIndex = Math.floor(Math.random() * result.length);
+            return result[randomIndex];
+        },
+        error: function(err) {
+         // if any errors occur during the process you can check out the
+         // the error by logging the 'err' argument
+         console.error(err);
+        }
+});
+   
+let contentArray = [
+    $('#page'), //tumblr blog
+    $('#base-container'), //tumblr home
+    $('#contents'), //youtube
+    $('#2x-container') //reddit
+];  
 
-    let contentArray = [
-        $('#posts'), //tumblr
-        $('#contents'), //youtube
-        $('#AppRouter-main-content') //reddit
-    ];  
+let [content] = contentArray.filter(el => el.length > 0);
 
-    let [content] = contentArray.filter(el => el.length > 0);
+let contentParent = content.parent();
 
-    let chips = $('#chips-wrapper');
+content.hide();
 
-    let contentParent = content.parent();
-
-    content.hide();
-    chips.hide();
-
-
-    contentParent.addClass('container');
-    contentParent.prepend(
-        '<div id="motivational-text">Get back to following your dreams!</div>',
-        '<img src="https://cdn.pixabay.com/photo/2019/06/21/19/27/switzerland-4290226_960_720.jpg"></img>',
-        '<a href="https://www.pexels.com/photo/silhouette-of-mountains-1323550/">Photo by Simon Berger:</a>')
-})
+contentParent.addClass('container');
+contentParent.prepend(
+    '<div id="motivational-text">Get back to following your dreams!</div>',
+    '<img src="https://unsplash.it/1200/800?image=" + image.id></img>'
+);
